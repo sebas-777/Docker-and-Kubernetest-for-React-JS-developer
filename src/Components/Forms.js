@@ -26,9 +26,12 @@ export default class Forms extends Component {
   } 
 
   deleteItem=(index)=>{
-    let original=this.state.todoItems
-    let selected=original.filter((value,key)=>{
+    let original=[...this.state.todoItems];
+    let left=original.filter((value,key)=>{
       return index!=key
+    })
+    this.setState({
+      original:left
     })
   }
 

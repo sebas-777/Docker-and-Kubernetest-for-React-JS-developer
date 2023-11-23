@@ -8,8 +8,9 @@ export default class List extends Component {
                 this.props.items.map((value,index)=>{
                     return(
                         <React.Fragment key={index}>
-                            <li class="list-group-item">{index}{value}</li>
+                            <li className="list-group-item">{value}
                             <button type="button" class="btn btn-danger w-2 mx-auto btn-sm my-1" onClick={()=>(this.props.deleteItem(index))}>X</button>
+                            </li>
                         </React.Fragment>
                     )
                 }
